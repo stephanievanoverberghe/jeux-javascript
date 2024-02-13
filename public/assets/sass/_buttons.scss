@@ -1,0 +1,30 @@
+@use 'media-queries' as *;
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+
+    @include md {
+        display: block;
+    }
+
+    .btn {
+        font-size: 2rem;
+        font-weight: bold;
+        border: none;
+        padding: 0.5rem 2rem;
+        background-color: var(--secondary);
+        color: var(--primary-dark);
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--secondary-light);
+        }
+
+        &:nth-child(2) {
+            margin: 1rem 0;
+        }
+    }
+}

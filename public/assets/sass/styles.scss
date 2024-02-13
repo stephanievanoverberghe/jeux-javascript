@@ -1,0 +1,15 @@
+@use "variables" as *;
+@use 'reset';
+@use 'bases';
+@use 'cards';
+@use 'buttons';
+@use 'media-queries' as*;
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
