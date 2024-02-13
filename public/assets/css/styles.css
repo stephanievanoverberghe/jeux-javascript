@@ -124,7 +124,7 @@ a:hover {
   margin-top: 2rem;
   background-color: var(--primary-light);
   width: auto;
-  height: 30rem;
+  height: auto;
 }
 @media only screen and (min-width: 768px) {
   .cards .card {
