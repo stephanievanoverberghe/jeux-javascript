@@ -21,11 +21,12 @@
 
         @include md {
             width: 40%;
+            height: 30rem;
         }
 
         @include lg {
             width: 30%;
-            height: 33rem;
+            height: 35rem;
         }
 
         a {
