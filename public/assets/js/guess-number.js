@@ -1,33 +1,20 @@
-/**
- * Débutant : Devinez le Nombre entre 0 et 100
- * 
-Objectif : Écrire un programme qui demande à l'utilisateur de deviner un nombre secret entre 0 et 100. Si l'utilisateur devine le nombre correctement, 
-affichez un message de félicitations. Sinon, indiquez si le nombre secret est plus grand ou plus petit.
-
-Consignes :
-
-1 - Générer un nombre secret aléatoire entre 0 et 100.
-2 - Demander à l'utilisateur de deviner le nombre.
-3 - Utiliser une boucle pour répéter la demande jusqu'à ce que l'utilisateur trouve le bon nombre.
-3 - Utiliser une pour vérifier si le nombre entré par l'utilisateur correspond au nombre secret.
-4 - Si c'est correct, afficher "Félicitations ! Vous avez deviné le nombre.".
-5 - Sinon, afficher "Désolé, essayez encore. Le nombre secret est plus [grand/petit].".
-6 - Tester votre programme en entrant différents nombres.
-7 - Gérer les entrées non valides.
-*/
-
-
 // Sélectionner les éléments du DOM
 const userAttempt = document.querySelector('.js--user-attempt');
 const insertNumber = document.querySelector('.insert__number');
 const checkButton = document.querySelector('.js--btn-check');
 const hint = document.querySelector('.js--hint');
 
-// Écouteur d'événement sur le bouton "Vérifier"
 let numberSecret = Math.floor(Math.random() * 101);
 
+/**
+ * Cette fonction lance le jeu
+ * Elle demande à l'utilisateur d'entrer un nombre et lance la boucle de jeu
+ */
 export function lancerJeu() {
 
+    /**
+     * Cette fonction permet d'initialiser le jeu à zero
+     */
     function initJeu() {
         numberSecret = Math.floor(Math.random() * 101);
         userAttempt.disabled = false;
@@ -40,6 +27,11 @@ export function lancerJeu() {
         userAttempt.addEventListener('keypress', numberKeypress);
     }
 
+    /**
+     * Cette fonction est le coeur du jeu,
+     * c'est la boucle qui gère les erreurs, ainsi que la partie
+     * @returns number
+     */
     function checkNumber() {
         // Récupération et conversion de la tentative de l'utilisateur
         let devine = parseInt(userAttempt.value, 10);
@@ -71,6 +63,10 @@ export function lancerJeu() {
         userAttempt.value = '';
     }
 
+    /**
+     * Cette fonction permet d'utiliser la touche Enter pour valider le nombre
+     * @param {key} event 
+     */
     function numberKeypress(event) {
         if (event.key === 'Enter') {
             checkNumber();
