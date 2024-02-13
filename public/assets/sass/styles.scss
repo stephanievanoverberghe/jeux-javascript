@@ -27,11 +27,13 @@
     }
 
     .return__play {
-        color: var(--secondary);
+        color: var(--primary-light);
+        text-transform: uppercase;
+        cursor: pointer;
         transition: all .3s;
 
         &:hover {
-            color: var(--secondary-light);
+            color: var(--secondary);
         }
     }
 

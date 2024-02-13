@@ -1,3 +1,3 @@
-import { lancerJeu } from './devinez-nbr.js';
+import { lancerJeu } from './guess-number.js';
 
 lancerJeu();

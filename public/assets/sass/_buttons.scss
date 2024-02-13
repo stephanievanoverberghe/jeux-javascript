@@ -35,12 +35,13 @@
     font-weight: bold;
     border: none;
     padding: 0.5rem 2rem;
-    background-color: var(--secondary);
-    color: var(--primary-dark);
+    background-color: var(--primary);
+    color: var(--primary-light);
     transition: all .3s;
     cursor: pointer;
 
     &:hover {
-        background-color: var(--secondary-light);
+        background-color: var(--primary-light);
+        color: var(--primary-dark);
     }
 }
