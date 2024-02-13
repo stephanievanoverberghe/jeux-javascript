@@ -1,5 +1,5 @@
 
-// Sélectionner les éléments du DOM
+// Sélectionner éléments du DOM
 const numberUser = document.querySelector('.js--number-user');
 const convertButton = document.querySelector('.js--btn-convert');
 const result = document.querySelector('.js--result');
