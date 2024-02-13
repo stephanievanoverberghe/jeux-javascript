@@ -28,3 +28,18 @@
         }
     }
 }
+
+.btn {
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    padding: 0.5rem 2rem;
+    background-color: var(--secondary);
+    color: var(--primary-dark);
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--secondary-light);
+    }
+}

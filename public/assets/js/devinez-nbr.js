@@ -17,24 +17,32 @@ Consignes :
 */
 
 
-const numberSecret = Math.floor(Math.random() * 101); 
-let devine = null;
+// Sélectionner les éléments du DOM
+const userAttempt = document.querySelector('.js--user-attempt');
+const checkButton = document.querySelector('.js--btn-check');
+const hint = document.querySelector('.js--hint');
 
-while (devine !== numberSecret) {
-    let inputPrompt = prompt("Devinez le nombre entre 0 et 100 : ");
-    devine = parseInt(inputPrompt, 10);
+// Générer un nombre secret aléatoire
+const numberSecret = Math.floor(Math.random() * 101);
 
+// Écouteur d'événement sur le bouton "Vérifier"
+checkButton.addEventListener('click', () => {
+    // Récupération et conversion de la tentative de l'utilisateur
+    let devine = parseInt(userAttempt.value, 10);
+    // Vérification de la validité de l'entrée
     if (!Number.isInteger(devine) || devine < 0 || devine > 100 || isNaN(devine)) {
-        console.log("Veuillez entrer un nombre valide entre 0 et 100.");
-      }
-
-    if (devine === numberSecret) {
-            console.log(`Félicitation ! Vous avez deviné le nombre. Le nombre secret est : ${numberSecret}`);
-    } else if (devine > numberSecret) {
-        console.log("Désolé, essayez encore, le nombre secret est plus petit.");
-    } else {
-        console.log("Désolé,essayez encore, le nombre secret est plus grand.");
+        hint.textContent = "Veuillez entrer un nombre valide entre 0 et 100.";
+        return;
     }
-}
+    // Comparaison de la tentative avec le nombre secret
+    if (devine === numberSecret) {
+        hint.textContent = `Félicitation ! Vous avez deviné le nombre. Le nombre secret est : ${numberSecret}`;
+    } else if (devine > numberSecret) {
+        hint.textContent = "Désolé, essayez encore, le nombre secret est plus petit.";
+    } else {
+        hint.textContent = "Désolé, essayez encore, le nombre secret est plus grand.";
+    }
+
+});
 
 

@@ -2,8 +2,10 @@
 @use 'reset';
 @use 'bases';
 @use 'cards';
-@use 'buttons';
-@use 'media-queries' as*;
+@use 'buttons' as *;
+@use 'forms' as *;
+@use 'utilities' as *;
+@use 'media-queries' as *;
 
 .container {
     min-height: 100vh;
