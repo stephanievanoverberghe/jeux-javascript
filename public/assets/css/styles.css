@@ -98,6 +98,14 @@ h3 {
   font-weight: bold;
 }
 
+a {
+  color: var(--primary);
+  transition: all 0.3s;
+}
+a:hover {
+  color: var(--primary-dark);
+}
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -187,13 +195,14 @@ h3 {
   font-weight: bold;
   border: none;
   padding: 0.5rem 2rem;
-  background-color: var(--secondary);
-  color: var(--primary-dark);
+  background-color: var(--primary);
+  color: var(--primary-light);
   transition: all 0.3s;
   cursor: pointer;
 }
 .buttons .btn:hover {
-  background-color: var(--secondary-light);
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
 }
 .buttons .btn:nth-child(2) {
   margin: 1rem 0;
@@ -531,6 +540,22 @@ h3 {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+}
+.container .hint {
+  text-align: center;
+}
+.container .information {
+  border: 1px solid var(--secondary-light);
+  color: var(--secondary-light);
+  width: auto;
+  padding: 1rem;
+}
+.container .return__play {
+  color: var(--secondary);
+  transition: all 0.3s;
+}
+.container .return__play:hover {
+  color: var(--secondary-light);
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -26,3 +26,12 @@ h3 {
     font-size: 2rem;
     font-weight: bold;
 }
+
+a {
+    color: var(--primary);
+    transition: all .3s;
+
+    &:hover {
+        color: var(--primary-dark);
+    }
+}
