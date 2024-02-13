@@ -1,3 +1,3 @@
-import { lancerJeu } from './guess-number.js';
+import { lancerJeuGuessNumber } from './guess-number.js';
 
-lancerJeu();
+lancerJeuGuessNumber();

@@ -10,7 +10,7 @@ let numberSecret = Math.floor(Math.random() * 101);
  * Cette fonction lance le jeu
  * Elle demande à l'utilisateur d'entrer un nombre et lance la boucle de jeu
  */
-export function lancerJeu() {
+export function lancerJeuGuessNumber() {
 
     /**
      * Cette fonction permet d'initialiser le jeu à zero
