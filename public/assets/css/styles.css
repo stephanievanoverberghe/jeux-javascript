@@ -130,12 +130,14 @@ a:hover {
   .cards .card {
     width: 40%;
     height: 30rem;
+    box-shadow: 3px 3px 5px var(--secondary);
   }
 }
 @media only screen and (min-width: 992px) {
   .cards .card {
     width: 30%;
     height: 35rem;
+    box-shadow: 5px 5px 1rem var(--secondary);
   }
 }
 .cards .card a {
@@ -171,7 +173,7 @@ a:hover {
   color: var(--primary-light);
 }
 .cards .card a .card__body {
-  padding: 2rem 0.5rem;
+  padding: 2rem 3rem;
 }
 .cards .card a .card__body .card__title {
   color: var(--primary-dark);
